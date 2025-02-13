@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Stardew;
+    src: url(./fonts/Stardew_Valley.ttf);
+}
+
+body {
+    font-family: Stardew;
+    background-color: rgb(201, 155, 122);
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    background-image: url(https://64.media.tumblr.com/f282bb646175c6e1b17d576c6496eaa1/443059971b180c80-fd/s540x810/b2af28b6639d63f10b152077e0d2a5823ddc85c0.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+    width: 90%;
+    max-width: 900px;
+    min-width: 600px;
+    border: 8px solid rgb(74, 30, 30);
+    border-radius: 3px;
+    box-shadow: 15px 15px 15px rgb(44, 33, 33);
+    display: flex;
+    justify-content: center;
+    align-items:end;
+}
+
+.chatbox{
+    box-sizing: border-box;
+    background-image: url(./images/stardew\ chatbox.png);
+    height: 200px;
+    width: 555px;
+    margin-bottom: 100px;
+    padding: 25px 40px 18px 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+p {
+    color: rgb(98, 28, 28);
+    font-size: 30px;
+    margin: 0;
+}
+
+.left-box {
+    height: 153px;
+    width: 287px;
+}
+
+.dialogue {
+    height: 125px;
+}
+
+.next-button {
+    font-size: 25px;
+    text-align: center;
+}
+
+.right-box {
+    height: auto;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.name {
+    font-size: 27px;
+}
