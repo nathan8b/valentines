@@ -59,6 +59,11 @@ p {
 .next-button {
     font-size: 25px;
     text-align: center;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    color: rgb(154, 65, 65)
 }
 
 .right-box {
