@@ -56,14 +56,14 @@ p {
     height: 125px;
 }
 
-.next-button {
+.button {
     font-size: 25px;
     text-align: center;
-    cursor: pointer;
 }
 
-.next-button:hover {
-    color: rgb(154, 65, 65)
+.button:hover {
+    cursor: pointer;
+    color: rgb(154, 65, 65);
 }
 
 .right-box {
@@ -76,4 +76,10 @@ p {
 
 .name {
     font-size: 27px;
+}
+
+.fadeImage {
+    position: absolute;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
 }
