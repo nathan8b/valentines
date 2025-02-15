@@ -1,10 +1,19 @@
 const dialogue = document.querySelector('.dialogue'); // dialogue text
 const nextBtn = document.querySelector('.next-button'); // next button
-const leftBox = document.querySelector('.left-box');
-const chatBox = document.querySelector('.chatbox');
-const emoji = document.querySelector('.fadeImage');
+const leftBox = document.querySelector('.left-box'); // left side of chat box
+const chatBox = document.querySelector('.chatbox'); // chat box
+const emoji = document.querySelector('.fadeImage'); // emoji
+const music = document.querySelector('#backgroundMusic'); // background music
+const boomSound = document.querySelector('#boom'); // background music
 
-emoji.style.visibility = 'hidden'; // hide emoji until No button clicked
+// play background music once user interacts with page
+document.addEventListener('click', () => {
+    music.muted = false; // Unmute the audio
+    music.play(); // Play the audio
+}, { once: true });
+
+// hide emoji until No button clicked
+emoji.style.visibility = 'hidden'; 
 
 // create Yes and No button to be added when next is clicked
 const yesBtn = document.createElement('p');
@@ -37,10 +46,15 @@ yesBtn.addEventListener('click', () => {
 noBtn.addEventListener('click', () => {
     chatBox.style.backgroundImage = 'url("./images/stardew\ chatbox.png")'; // change character image
     dialogue.textContent = "Oh... okay :/"; // change dialogue
-    // make emoji appear, then fade out
-    emoji.style.visibility = 'visible';
-    emoji.style.opacity = '0';
-    // remove the emoji after
+    // play boom sound
+    boomSound.play();
+    // delay emoji slightly to line up with sound effect
+    setTimeout(() => {
+        emoji.style.visibility = 'visible';
+        emoji.style.opacity = '0';
+    }, 500);
+    
+    // remove the emoji after 2 seconds
     setTimeout(() => {
         emoji.style.visibility = 'hidden';
         emoji.style.opacity = '1';
